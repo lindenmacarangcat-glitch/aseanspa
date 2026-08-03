@@ -1298,6 +1298,7 @@
             border-radius: 28px;
             padding: 24px 20px;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
             margin-top: 16px;
             border: 1px solid var(--border-light);
             transition: 0.5s;
@@ -1308,10 +1309,14 @@
             box-shadow: 0 16px 40px rgba(31, 61, 58, 0.06);
         }
         .rate-table {
-            width: 100%;
+            width: max-content;
+            min-width: 100%;
             border-collapse: collapse;
             font-size: 0.82rem;
-            min-width: 560px;
+        }
+        .rate-table thead th,
+        .rate-table tbody td {
+            white-space: nowrap;
         }
         .rate-table thead th {
             text-align: left;
@@ -1758,6 +1763,7 @@
             .rate-table {
                 font-size: 0.88rem;
                 min-width: auto;
+                width: 100%;
             }
             .tabs-nav {
                 gap: 12px;
@@ -1780,12 +1786,23 @@
                 padding: 14px 10px;
             }
             .rate-table {
-                font-size: 0.7rem;
-                min-width: 460px;
+                font-size: 0.72rem;
+                min-width: 700px;
+                width: auto;
             }
             .rate-table thead th,
             .rate-table tbody td {
-                padding: 5px 6px;
+                padding: 6px 10px;
+            }
+            .rate-table thead th {
+                font-size: 0.65rem;
+            }
+            .rate-table tbody td {
+                font-size: 0.82rem;
+            }
+            .rate-table th:first-child,
+            .rate-table td:first-child {
+                min-width: 160px;
             }
             .contact-grid {
                 grid-template-columns: 1fr 1fr;
